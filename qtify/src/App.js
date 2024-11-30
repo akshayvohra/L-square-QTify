@@ -39,7 +39,11 @@ function App() {
     <div className="App">
       <Navbar searchData={searchData} />
       <Hero />
-      <Section title="Top Albums" />
+      {/* Top Albums Section */}
+      <Section title="Top Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/top" />
+
+      {/* New Albums Section */}
+      <Section title="New Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/new" />
       {/* <Card /> */}
     </div>
   );
