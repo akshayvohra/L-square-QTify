@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Grid, Button, Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import axios from 'axios';
 import AlbumCard from '../card/card';
+import { Grid2 as Grid} from '@mui/material'
 
 const Section = ({ title }) => {
   const [albums, setAlbums] = useState([]);
@@ -34,7 +35,7 @@ const Section = ({ title }) => {
       </div>
 
       <div style={{ marginBottom: '16px' }}>
-        <Grid container spacing={3}>
+        <Grid container spacing={12}>
           {albums.slice(0, isCollapsed ? 4 : albums.length).map((album) => (
             <Grid item xs={12} sm={6} md={4} key={album.id}>
               <AlbumCard album={album} />
