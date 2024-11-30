@@ -27,9 +27,11 @@
 
 import React from 'react';
 import './App.css';
-
+import Section from './components/Section/Section';
 import Hero from './components/hero/hero';
 import Navbar from './components/navbar/navbar';
+
+
 function App() {
   const searchData = []; // Your search data goes here
 
@@ -37,6 +39,8 @@ function App() {
     <div className="App">
       <Navbar searchData={searchData} />
       <Hero />
+      <Section title="Top Albums" />
+      {/* <Card /> */}
     </div>
   );
 }
