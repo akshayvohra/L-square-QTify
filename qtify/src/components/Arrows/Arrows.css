@@ -1,0 +1,27 @@
+/* Style the left and right arrows */
+.swiper-button-prev, .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%); /* Center vertically */
+  }
+  
+  /* Position the left arrow on the left */
+  .swiper-button-prev {
+    left: 10px; /* Adjust as needed */
+  }
+  
+  /* Position the right arrow on the right */
+  .swiper-button-next {
+    right: 10px; /* Adjust as needed */
+  }
+  
+  /* Optional: Add hover effect */
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    opacity: 0.8;
+  }
+  
