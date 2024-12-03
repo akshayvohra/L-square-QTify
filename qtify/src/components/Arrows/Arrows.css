@@ -1,27 +1,54 @@
-/* Style the left and right arrows */
+/* Ensure arrows are positioned correctly and clickable */
 .swiper-button-prev, .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10; /* Ensure they appear above other elements */
+  }
+  
+  .swiper-button-prev {
+    left: 10px; /* Adjust the position */
+  }
+  
+  .swiper-button-next {
+    right: 10px; /* Adjust the position */
+  }
+  
+  /* Optional: Add hover effect */
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    opacity: 0.7;
+  }
+  
+
+
+
+/* .swiper-button-prev, .swiper-button-next {
     position: absolute;
     top: 50%;
     z-index: 10;
     background: none;
     border: none;
     cursor: pointer;
-    transform: translateY(-50%); /* Center vertically */
+    transform: translateY(-50%); 
   }
   
-  /* Position the left arrow on the left */
+  
   .swiper-button-prev {
-    left: 10px; /* Adjust as needed */
+    left: 10px; 
   }
   
-  /* Position the right arrow on the right */
+  
   .swiper-button-next {
-    right: 10px; /* Adjust as needed */
+    right: 10px; 
   }
   
-  /* Optional: Add hover effect */
+ 
   .swiper-button-prev:hover,
   .swiper-button-next:hover {
     opacity: 0.8;
-  }
+  } */
   

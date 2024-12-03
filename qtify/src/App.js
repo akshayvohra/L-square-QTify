@@ -30,6 +30,7 @@ import './App.css';
 import Section from './components/Section/Section';
 import Hero from './components/hero/hero';
 import Navbar from './components/navbar/navbar';
+import  'swiper/css';
 
 
 function App() {

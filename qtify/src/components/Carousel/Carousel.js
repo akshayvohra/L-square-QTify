@@ -1,7 +1,7 @@
 // import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import 'swiper/swiper-bundle.min.css';
-import 'swiper/css';
+
 import LeftArrow from '../Arrows/LeftArrow'; 
 import RightArrow from '../Arrows/RightArrow';
 import AlbumCard from '../card/card';
@@ -18,6 +18,16 @@ const Carousel = ({ albums }) => {
         swiperRef.current.swiper.update(); 
       }
     }, [albums]); // Update Swiper when albums change
+
+
+    const handlePrev = () => {
+        swiperRef.current.swiper.slidePrev();
+      };
+  
+      const handleNext = () => {
+        swiperRef.current.swiper.slideNext();
+      };
+
   
     return (
       <div style={{ position: 'relative' }}>
@@ -48,15 +58,16 @@ const Carousel = ({ albums }) => {
               },
           }}
         >
-          {albums.slice(0, 7).map((album) => (
+          {/* {albums.slice(0, 7).map((album) => ( */}
+          {albums.map((album) => (
             <SwiperSlide key={album.id}>
               <AlbumCard album={album} />
             </SwiperSlide>
           ))}
         </Swiper>
   
-        <LeftArrow />
-        <RightArrow />
+        <LeftArrow onClick={handlePrev} />
+        <RightArrow onClick={handleNext} />
       </div>
     );
   };

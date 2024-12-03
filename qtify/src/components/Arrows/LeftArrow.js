@@ -1,14 +1,15 @@
 import React from 'react';
-import styles from './Arrows.css';
+import './Arrows.css';
 
-const LeftArrow = () => {
+
+const LeftArrow = ({ onClick }) => {
   return (
-    // <button className="swiper-button-prev" style={{ position: 'absolute', left: 0, zIndex: 10 }}>
-    <button className="swiper-button-prev" style={{ position: 'absolute', left: 0, zIndex: 10 }}>
-      {/* Import your SVG here */}
+    <button className="swiper-button-prev" onClick={onClick} style={{ position: 'absolute', left: '10px', top: '50%', zIndex: 10 }}>
       <img src="path_to_left_arrow.svg" alt="Left Arrow" />
     </button>
   );
 };
+
+
 
 export default LeftArrow;
